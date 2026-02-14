@@ -4,7 +4,7 @@ This repository contains my solution for the **Sarvam AI Speech Team Hiring Chal
 
 The project is a robust pipeline that extracts audio from YouTube videos, transcribes it using OpenAI's Whisper model, and segments the text into semantically coherent chunks. Crucially, it enforces a strict time constraint (default: **15 seconds**) per chunk while maintaining sentence integrity.
 
-## 🧠 Technical Approach
+##  Technical Approach
 
 The core logic resides in the `RobustVideoChunker` class. The pipeline follows these steps:
 
@@ -17,7 +17,7 @@ The core logic resides in the `RobustVideoChunker` class. The pipeline follows t
     * **Pass 1 (Aggregation):** Greedily groups sentences together to form a chunk. It keeps adding sentences as long as the total duration is `< 15.0 seconds`.
     * **Pass 2 (Oversized Handling):** If a single sentence is naturally longer than 15 seconds, the algorithm performs a "forced split" at the word boundary closest to the 15-second mark to ensure the constraint is met.
   
-## 🚀 Features
+##  Features
 
 * **Robust YouTube Download:** Utilizes `yt-dlp` with cookie support to bypass "Sign in to confirm you’re not a bot" errors.
 * **High-Precision Transcription:** Uses OpenAI's **Whisper** (configurable model size) to generate word-level timestamps.
@@ -25,7 +25,7 @@ The core logic resides in the `RobustVideoChunker` class. The pipeline follows t
 * **Time Constraint Enforcement:** Implements a two-pass algorithm to ensure no chunk exceeds the 15-second limit, splitting oversized sentences dynamically if necessary.
 * **Interactive UI:** Includes a **Gradio** web interface for easy testing and visualization.
 
-## 🛠️ Installation
+##  Installation
 
 ### Prerequisites
 * Python 3.8+
