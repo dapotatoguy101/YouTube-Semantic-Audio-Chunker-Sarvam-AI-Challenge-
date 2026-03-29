@@ -1,6 +1,6 @@
-# YouTube Semantic Audio Chunker (Sarvam AI Challenge)
+# YouTube Semantic Audio Chunker
 
-This repository contains my solution for the **Sarvam AI Speech Team Hiring Challenge 2024**. 
+This repository contains my code for the **Youtube Semantic Audio Chunker**. 
 
 The project is a robust pipeline that extracts audio from YouTube videos, transcribes it using OpenAI's Whisper model, and segments the text into semantically coherent chunks. Crucially, it enforces a strict time constraint (default: **15 seconds**) per chunk while maintaining sentence integrity.
 
